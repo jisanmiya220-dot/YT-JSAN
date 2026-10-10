@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b1020">
+<title>Jisan AI YouTube Tools V1</title>
+<style>
+:root{--bg:#080d19;--panel:#10182a;--panel2:#141f35;--line:#26334c;--text:#f2f6ff;--muted:#9eacc5;--blue:#5687ff;--cyan:#35d6d0;--green:#38d996;--red:#ff7272}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#14213e 0,#080d19 48%);color:var(--text);font-family:system-ui,-apple-system,"Noto Sans Bengali",sans-serif;line-height:1.55}button,input,select,textarea{font:inherit}button{cursor:pointer}.app{max-width:1120px;margin:auto;padding:16px}.top{display:flex;align-items:center;gap:12px;justify-content:space-between;flex-wrap:wrap;padding:10px 0 20px}.brand{display:flex;align-items:center;gap:11px}.logo{height:48px;width:48px;display:grid;place-items:center;border-radius:15px;background:linear-gradient(135deg,var(--blue),#824dff);font-size:22px;font-weight:900;box-shadow:0 8px 30px #416eff35}.brand h1{font-size:19px;margin:0}.brand p{margin:2px 0 0;color:var(--muted);font-size:12px}.pill{font-size:12px;border:1px solid #2b795e;background:#102b28;color:#7ef0c0;border-radius:999px;padding:5px 10px}.hero{padding:24px 22px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(125deg,#172544,#10182a 70%);margin-bottom:16px}.hero h2{font-size:clamp(23px,5vw,34px);line-height:1.2;margin:0 0 10px}.hero p{margin:0;color:var(--muted);max-width:700px}.hero b{color:#83dff6}.notice{padding:12px 14px;border:1px solid #65502a;background:#241e13;color:#ffe0a0;border-radius:12px;font-size:13px;margin:15px 0}.layout{display:grid;grid-template-columns: minmax(0, .85fr) minmax(0,1.15fr);gap:16px}.panel{background:#0f1728eF;border:1px solid var(--line);border-radius:18px;padding:17px;min-width:0}.panel h3{font-size:17px;margin:0 0 14px}.field{margin-bottom:13px}.field label{display:block;font-size:13px;color:#c8d4ea;margin-bottom:6px}.field input,.field select,.field textarea{width:100%;color:var(--text);background:#090f1e;border:1px solid #2b3852;border-radius:10px;padding:11px 12px;outline:none}.field textarea{resize:vertical;min-height:82px}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px #5687ff20}.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}.checks{display:flex;flex-wrap:wrap;gap:8px}.chip{border:1px solid #2b3852;border-radius:10px;padding:8px 10px;color:#d7e1f4;background:#0a1120;font-size:13px}.chip input{accent-color:var(--blue)}.btn{border:0;border-radius:11px;padding:11px 14px;font-weight:750;color:white;background:linear-gradient(135deg,#4d7fff,#7657f6);box-shadow:0 5px 18px #4d7fff22}.btn:active{transform:scale(.99)}.btn.secondary{background:#1a2740;border:1px solid #344563;box-shadow:none;color:#e7efff}.btn.green{background:linear-gradient(135deg,#159b76,#28b98b)}.btn.small{font-size:12px;padding:7px 10px;border-radius:8px}.btnrow{display:flex;flex-wrap:wrap;gap:8px}.btn.full{width:100%}.output-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:10px}.tabs{display:flex;gap:7px;overflow-x:auto;padding:2px 0 10px}.tab{white-space:nowrap;border:1px solid var(--line);background:#0a1120;color:var(--muted);padding:8px 11px;border-radius:9px;font-size:13px}.tab.active{color:white;border-color:#5a82ff;background:#20345c}.output{width:100%;min-height:300px;padding:14px;border-radius:12px;background:#080e1b;border:1px solid #26334c;color:#e6edfc;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px;line-height:1.75}.empty{color:#8392ac}.smallnote{font-size:12px;color:var(--muted)}.stats{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.stat{font-size:12px;color:#b9c7df;border:1px solid var(--line);border-radius:8px;padding:5px 8px}.footer{text-align:center;color:#74839d;font-size:12px;padding:22px 8px}.thumb-preview{aspect-ratio:16/9;width:100%;border-radius:13px;border:1px solid #384969;display:flex;align-items:center;justify-content:center;text-align:center;padding:18px;background:linear-gradient(135deg,#172c58,#6b2cc1 55%,#10182a);margin-bottom:12px;overflow:hidden}.thumb-preview strong{font-size:clamp(22px,5vw,38px);line-height:1.18;text-shadow:0 3px 15px #000}.calendar{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px}.day{font-size:11px;text-align:center;color:var(--muted);padding:5px 0}.datecell{min-height:42px;border:1px solid var(--line);border-radius:7px;background:#0a1120;padding:5px;font-size:11px}.datecell.today{border-color:var(--cyan);color:var(--cyan)}.datecell.marked{background:#192d4f;border-color:#5687ff}.hide{display:none!important}
+@media(max-width:760px){.app{padding:11px}.layout{grid-template-columns:1fr}.hero{padding:19px 16px}.panel{padding:14px}.output{min-height:250px}.brand h1{font-size:17px}.two{gap:8px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="top"><div class="brand"><div class="logo">J</div><div><h1>Jisan AI YouTube Tools</h1><p>Creator Toolkit · Version 1.0</p></div></div><span class="pill">FREE · API ছাড়া</span></header>
+<section class="hero"><h2>তোমার YouTube কাজ, <b>এক জায়গায়।</b></h2><p>বিষয় থেকে স্ক্রিপ্ট, SEO, সাবটাইটেল ও আপলোড পরিকল্পনা—মোবাইল থেকেই তৈরি করো, কপি করো এবং ফাইলে সংরক্ষণ করো।</p></section>
+<div class="notice">ℹ️ <b>V1-এর সীমাবদ্ধতা:</b> এটি API ছাড়া চলে এবং টেমপ্লেট/নিয়ম ব্যবহার করে নমুনা কনটেন্ট তৈরি করে। লাইভ ট্রেন্ড, সত্যিকারের AI লেখা, স্বয়ংক্রিয় YouTube আপলোড বা AI ছবি তৈরির জন্য আলাদা পরিষেবা/অনুমতি লাগবে।</div>
+<div class="layout">
+<section class="panel">
+<h3>⚙️ কনটেন্ট সেটিংস</h3>
+<div class="field"><label for="topic">ভিডিওর বিষয় *</label><textarea id="topic" placeholder="যেমন: পড়াশোনায় মনোযোগ বাড়ানোর ৫টি উপায়">পড়াশোনায় মনোযোগ বাড়ানোর ৫টি উপায়</textarea></div>
+<div class="two">
+<div class="field"><label for="category">ক্যাটাগরি</label><select id="category"><option>শিক্ষামূলক</option><option>মোটিভেশনাল</option><option>ফানি ও গল্প</option><option>প্রযুক্তি</option><option>ভ্লগ</option><option>গেমিং</option><option>রান্না</option><option>ভ্রমণ</option><option>লাইফস্টাইল</option></select></div>
+<div class="field"><label for="lang">ভাষা</label><select id="lang"><option value="bn">বাংলা</option><option value="en">English</option><option value="mix">বাংলা + English</option></select></div>
+</div>
+<div class="two">
+<div class="field"><label for="duration">দৈর্ঘ্য</label><select id="duration"><option value="15">১৫ সেকেন্ড</option><option value="30">৩০ সেকেন্ড</option><option value="60" selected>১ মিনিট</option><option value="180">৩ মিনিট</option><option value="300">৫ মিনিট</option><option value="600">১০ মিনিট</option><option value="1200">২০ মিনিট</option></select></div>
+<div class="field"><label for="kind">ভিডিও ধরন</label><select id="kind"><option value="short">YouTube Shorts</option><option value="long">Long Video</option></select></div>
+</div>
+<div class="field"><label for="audience">টার্গেট দর্শক</label><select id="audience"><option>শিক্ষার্থী</option><option>সাধারণ দর্শক</option><option>শিশু ও পরিবার</option><option>নতুন YouTuber</option><option>প্রযুক্তিপ্রেমী</option></select></div>
+<div class="field"><label for="tone">ভিডিওর স্টাইল</label><select id="tone"><option>বন্ধুসুলভ ও সহজ</option><option>উদ্দীপনামূলক</option><option>গল্পের মতো</option><option>মজার</option><option>পেশাদার</option></select></div>
+<div class="field"><label>কী কী তৈরি করবে?</label><div class="checks">
+<label class="chip"><input type="checkbox" class="part" value="script" checked> স্ক্রিপ্ট</label>
+<label class="chip"><input type="checkbox" class="part" value="titles" checked> টাইটেল</label>
+<label class="chip"><input type="checkbox" class="part" value="description" checked> Description</label>
+<label class="chip"><input type="checkbox" class="part" value="tags" checked> Tags</label>
+<label class="chip"><input type="checkbox" class="part" value="subtitles" checked> সাবটাইটেল</label>
+<label class="chip"><input type="checkbox" class="part" value="thumbnail" checked> Thumbnail</label>
+<label class="chip"><input type="checkbox" class="part" value="schedule" checked> আপলোড প্ল্যান</label>
+</div></div>
+<div class="btnrow"><button class="btn full" id="generate">✦ কনটেন্ট তৈরি করো</button><button class="btn secondary full" id="reset">ফর্ম রিসেট</button></div>
+<p class="smallnote">টিপস: বিষয় নির্দিষ্ট করে লিখলে টেমপ্লেট থেকে পাওয়া ফলাফল আরও প্রাসঙ্গিক হবে।</p>
+</section>
+<section class="panel">
+<div class="output-head"><h3 style="margin:0">🧰 তোমার কনটেন্ট</h3><span class="pill" id="status">প্রস্তুত</span></div>
+<div class="tabs" id="tabs">
+<button class="tab active" data-tab="script">স্ক্রিপ্ট</button><button class="tab" data-tab="titles">টাইটেল</button><button class="tab" data-tab="description">Description</button><button class="tab" data-tab="tags">Tags</button><button class="tab" data-tab="subtitles">সাবটাইটেল</button><button class="tab" data-tab="thumbnail">Thumbnail</button><button class="tab" data-tab="schedule">আপলোড প্ল্যান</button>
+</div>
+<div id="thumbPreview" class="thumb-preview hide"><strong id="thumbText">তোমার থাম্বনেইল লেখা</strong></div>
+<div id="output" class="output"><span class="empty">বাম পাশ থেকে বিষয় ও সেটিংস নির্বাচন করে “কনটেন্ট তৈরি করো” চাপো। ফলাফল এখানে দেখা যাবে।</span></div>
+<div class="stats"><span class="stat" id="wordCount">০ শব্দ</span><span class="stat" id="charCount">০ অক্ষর</span><span class="stat">ডিভাইসেই তৈরি</span></div>
+<div class="btnrow" style="margin-top:12px"><button class="btn green" id="copy">কপি</button><button class="btn secondary" id="download">ফাইল ডাউনলোড</button><button class="btn secondary" id="downloadAll">সব কনটেন্ট .txt</button></div>
+<p class="smallnote">সাবটাইটেল ট্যাবে গেলে SRT ফাইল ডাউনলোড করা যাবে। থাম্বনেইল ট্যাবে প্রিভিউ ও ডিজাইন নির্দেশনা থাকবে।</p>
+</section>
+</div>
+<section class="panel" style="margin-top:16px">
+<div class="output-head"><h3 style="margin:0">🗓️ আপলোড ক্যালেন্ডার</h3><button class="btn small secondary" id="calendarDownload">ক্যালেন্ডার ডাউনলোড</button></div>
+<p class="smallnote">নিচের সময়গুলো কেবল পরীক্ষা করার প্রস্তাব। YouTube Studio → Analytics → Audience-এ তোমার দর্শক কখন YouTube-এ থাকে তা দেখে সময় ঠিক করো।</p>
+<div class="two"><div class="field"><label for="startDate">শুরুর তারিখ</label><input type="date" id="startDate"></div><div class="field"><label for="frequency">কত ঘন ঘন পোস্ট করবে</label><select id="frequency"><option value="1">প্রতিদিন</option><option value="2" selected>প্রতি ২ দিনে</option><option value="3">প্রতি ৩ দিনে</option><option value="7">সপ্তাহে একবার</option></select></div></div>
+<div id="calendar" class="calendar"></div>
+</section>
+<div class="footer">Jisan AI YouTube Tools V1 · Free template-based toolkit · কোনো কনটেন্টের ভিউ/আয়ের নিশ্চয়তা নেই</div>
+</div>
+<script>
+(function(){
+'use strict';
+const $=id=>document.getElementById(id);
+const data={script:'',titles:'',description:'',tags:'',subtitles:'',thumbnail:'',schedule:''};
+let active='script';
+const bnDigits=n=>String(n).replace(/\d/g,d=>'০১২৩৪৫৬৭৮৯'[+d]);
+function val(id){return $(id).value.trim()}
+function getSettings(){return {topic:val('topic'),category:val('category'),lang:val('lang'),duration:+val('duration'),kind:val('kind'),audience:val('audience'),tone:val('tone')}}
+function words(s){return (s.match(/\S+/g)||[]).length}
+function clean(s){return s.replace(/[<>]/g,'')}
+function isEnglish(){return val('lang')==='en'}
+function mixed(){return val('lang')==='mix'}
+function t(bn,en){return isEnglish()?en:bn}
+function makeScript(s){
+ const {topic,category,duration,kind,audience,tone}=s;
+ const isShort=duration<=60||kind==='short';
+ const n=Math.max(3,Math.min(12,Math.ceil(duration/25)));
+ const opener=isEnglish()?`Have you ever thought about "${topic}"? In this video, we'll explore it step by step.`:`তুমি কি কখনো ভেবেছ—${topic}? আজকের ভিডিওতে বিষয়টি সহজভাবে ধাপে ধাপে দেখব।`;
+ const intro=isEnglish()?`Welcome back! This video is for ${audience.toLowerCase()}. Stay until the end, and choose one idea to try today.`:`স্বাগতম! এই ভিডিওটি ${audience}দের জন্য। শেষ পর্যন্ত দেখো, তারপর আজই একটি পরামর্শ কাজে লাগাও।`;
+ const points=isEnglish()?[
+ 'First, make the goal clear. Write down exactly what you want to achieve.',
+ 'Second, start with one small action. A simple routine is easier to maintain.',
+ 'Third, remove distractions and give yourself focused time.',
+ 'Fourth, check your progress. Notice what works and improve it gradually.',
+ 'Finally, be patient. Consistency matters more than trying to be perfect.'
+ ]:[
+ 'প্রথমে লক্ষ্য পরিষ্কার করো। ঠিক কী করতে চাও, সেটি লিখে রাখো।',
+ 'দ্বিতীয়ত, ছোট একটি কাজ দিয়ে শুরু করো। ছোট অভ্যাস ধরে রাখা সহজ।',
+ 'তৃতীয়ত, মনোযোগ নষ্ট করে এমন জিনিস দূরে রাখো এবং নির্দিষ্ট সময় ঠিক করো।',
+ 'চতুর্থত, নিজের অগ্রগতি দেখো। কোন পদ্ধতি কাজে লাগছে তা বুঝে ধীরে ধীরে উন্নতি করো।',
+ 'সবশেষে, ধৈর্য ধরো। একবারে নিখুঁত হওয়ার চেয়ে নিয়মিত চেষ্টা বেশি গুরুত্বপূর্ণ।'
+ ];
+ const lines=[];
+ lines.push(isEnglish()?'[HOOK — first 3 seconds]':'[হুক — প্রথম ৩ সেকেন্ড]');
+ lines.push(opener,'');
+ lines.push(isEnglish()?'[INTRO]':'[শুরু]',intro,'');
+ const sceneSeconds=Math.max(5,Math.floor(duration/n));
+ for(let i=0;i<n;i++){
+   const point=points[i%points.length];
+   lines.push((isEnglish()?'[SCENE ':'[দৃশ্য ')+(i+1)+' · '+Math.min(duration,(i+1)*sceneSeconds)+'s]');
+   if(i===0)lines.push(isEnglish()?'Visual: show the problem clearly.':'ভিজ্যুয়াল: সমস্যাটি স্পষ্টভাবে দেখাও।');
+   else lines.push(isEnglish()?'Visual: use a relevant example, demonstration, or on-screen keywords.':'ভিজ্যুয়াল: প্রাসঙ্গিক উদাহরণ, প্রদর্শন বা পর্দায় গুরুত্বপূর্ণ শব্দ দেখাও।');
+   lines.push((i%2===0?'ভয়েসওভার: ':'ভয়েসওভার: ')+point,'');
+ }
+ lines.push(isEnglish()?'[OUTRO + CALL TO ACTION]':'[শেষ + দর্শকের প্রতি আহ্বান]');
+ lines.push(isEnglish()?`Which tip will you try first? Comment below, share this video with someone who may find it useful, and subscribe for more ${category.toLowerCase()} content.`:`তুমি কোন পরামর্শটি আগে কাজে লাগাবে? কমেন্টে জানাও, উপকারী মনে হলে ভিডিওটি শেয়ার করো এবং এমন আরও ${category} ভিডিওর জন্য সাবস্ক্রাইব করো।`);
+ lines.push('',isEnglish()?'Production note: This is a reusable starter template. Replace generic tips with fact-checked details specific to your topic.':'প্রস্তুতির নোট: এটি একটি পুনর্ব্যবহারযোগ্য প্রাথমিক টেমপ্লেট। বিষয়ের সঙ্গে মিলিয়ে নির্দিষ্ট তথ্য যোগ করো এবং প্রকাশের আগে তথ্য যাচাই করো।');
+ if(duration>=180){
+   lines.push('',isEnglish()?'EXPANSION PLAN: Add a real example, a step-by-step demonstration, one common mistake, a summary, and verified sources to each relevant section.':'দীর্ঘ ভিডিও উন্নত করার পরিকল্পনা: প্রাসঙ্গিক অংশে বাস্তব উদাহরণ, ধাপে ধাপে প্রদর্শন, সাধারণ ভুল, সারাংশ ও যাচাই করা সূত্র যোগ করো।');
+ }
+ return lines.join('\n');
+}
+function makeTitles(s){
+ const topic=clean(s.topic);
+ if(isEnglish())return [
+ `How to ${topic}: A Simple Guide`,
+ `${topic} — 5 Practical Tips to Try Today`,
+ `Stop Making These Mistakes About ${topic}`,
+ `${topic} Explained for Beginners`,
+ `Can These Simple Steps Help With ${topic}?`
+ ].join('\n');
+ return [
+ `${topic} | সহজ ৫টি কার্যকর উপায়`,
+ `${topic} করার আগে এই বিষয়গুলো জানো`,
+ `${topic}: নতুনদের জন্য সম্পূর্ণ গাইড`,
+ `${topic} নিয়ে যে ভুলগুলো এড়িয়ে চলবে`,
+ `মাত্র কয়েকটি সহজ ধাপে ${topic}`
+ ].join('\n');
+}
+function makeDescription(s){
+ const topic=clean(s.topic),title=makeTitles(s).split('\n')[0];
+ if(isEnglish())return `${title}\n\nIn this video, we discuss ${topic} in a clear, beginner-friendly way for ${s.audience.toLowerCase()}.\n\n📌 IN THIS VIDEO\n• Key ideas and practical tips\n• Examples to help you understand\n• Simple next steps to try\n\n💬 QUESTION: Which point was most useful to you? Leave a comment.\n\n👍 If you found this useful, consider liking the video and subscribing for more ${s.category.toLowerCase()} content.\n\n#${s.category.replace(/\W/g,'')} #YouTubeTips #Learning\n\nCreator note: Edit this description to match the final video. Add only links, claims, and timestamps that are accurate.`;
+ return `${title}\n\nএই ভিডিওতে “${topic}” বিষয়টি ${s.audience}দের জন্য সহজভাবে তুলে ধরা হয়েছে। ভিডিওটি দেখে তোমার কাজে লাগে এমন পরামর্শ বেছে নাও।\n\n📌 এই ভিডিওতে থাকছে:\n• বিষয়টির মূল ধারণা\n• সহজ ব্যাখ্যা ও ব্যবহারিক পরামর্শ\n• কাজে লাগানোর জন্য পরবর্তী পদক্ষেপ\n\n💬 প্রশ্ন: ভিডিওর কোন অংশটি তোমার সবচেয়ে ভালো লেগেছে? কমেন্টে জানাও।\n\n👍 উপকারী মনে হলে লাইক দাও, বন্ধুদের সঙ্গে শেয়ার করো এবং এমন আরও ${s.category} ভিডিওর জন্য সাবস্ক্রাইব করো।\n\n#${s.category.replace(/\s/g,'')} #YouTubeBangla #শিক্ষা\n\nনোট: ভিডিওর সঙ্গে মিলিয়ে বর্ণনাটি সম্পাদনা করো। ভুল তথ্য, অপ্রাসঙ্গিক ট্যাগ বা যাচাই না করা দাবি যোগ কোরো না।`;
+}
+function makeTags(s){
+ const base=isEnglish()?['youtube tips','how to','beginner guide','content creator','learn online']:['বাংলা টিউটোরিয়াল','শিক্ষামূলক ভিডিও','বাংলা ইউটিউব','সহজ টিপস','নতুনদের গাইড'];
+ const topicWords=s.topic.split(/[\s,।!?]+/).filter(x=>x.length>1).slice(0,7);
+ return [...new Set([s.topic,...topicWords,...base,s.category,s.audience,'YouTube Shorts'])].join(', ');
+}
+function toSrt(script,duration){
+ const chunks=script.split(/\n(?=\[দৃশ্য|\[SCENE)/).filter(x=>/\[(দৃশ্য|SCENE)/.test(x));
+ const arr=chunks.length?chunks:[script];
+ const sec=Math.max(3,Math.floor(duration/arr.length));
+ return arr.map((chunk,i)=>{
+   const start=i*sec,end=Math.min(duration,(i+1)*sec);
+   const fmt=n=>{let h=Math.floor(n/3600),m=Math.floor(n%3600/60),s=n%60;return `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')},000`};
+   const text=chunk.split('\n').filter(x=>x&&!x.startsWith('[')&&!x.startsWith('Visual:')&&!x.startsWith('ভিজ্যুয়াল:')).slice(-2).join(' ').trim()||chunk.replace(/\n/g,' ');
+   return `${i+1}\n${fmt(start)} --> ${fmt(Math.max(start+1,end))}\n${text}`;
+ }).join('\n\n');
+}
+function makeThumbnail(s){
+ const headline=isEnglish()?s.topic.toUpperCase():s.topic;
+ return `THUMBNAIL DESIGN BRIEF\n\nMain text: ${headline}\nSupporting text: ${isEnglish()?'SIMPLE GUIDE':'সহজ গাইড'}\n\nCanvas: 1280 × 720 px (16:9)\nStyle: professional, high contrast, clean composition\nBackground: deep navy with blue/purple gradient\nText: bold white Bengali/English font; highlight one key word in cyan\nLayout: large headline on left, one clear visual/icon on right, generous spacing\nRules: keep text short and readable on a phone; use licensed or original imagery; do not add fake YouTube UI or misleading claims.\n\nAI image prompt (optional external tool): Create a professional 16:9 YouTube thumbnail about "${s.topic}". Dark navy and electric-blue background, bold readable ${s.lang==='en'?'English':'Bengali'} headline area, strong contrast, clean composition, one relevant visual, no watermark, no extra gibberish text.`;
+}
+function makeSchedule(s){
+ const start= $('startDate').value?new Date($('startDate').value+'T12:00:00'):new Date();
+ const freq=+$('frequency').value;
+ const times=s.kind==='short'?['12:30 PM','7:30 PM']:['5:30 PM','8:00 PM'];
+ const rows=[];
+ for(let i=0;i<14;i+=freq){
+  const d=new Date(start);d.setDate(d.getDate()+i);
+  rows.push(`${d.toLocaleDateString(isEnglish()?'en-US':'bn-BD',{weekday:'short',day:'numeric',month:'short',year:'numeric'})} — ${times[(i/freq)%times.length]} — ${s.kind==='short'?'Shorts':'Long video'} — বিষয়: ${s.topic}`);
+ }
+ return `১৪ দিনের নমুনা আপলোড পরিকল্পনা\n\n${rows.join('\n')}\n\nমনে রাখবে: এগুলো কেবল পরীক্ষার সময়। YouTube Studio Analytics-এ দর্শক সক্রিয় থাকার তথ্য দেখে নিজের সময় ঠিক করো। একই সময়ে পোস্ট করলেই ভিউ বাড়বে এমন নিশ্চয়তা নেই।`;
+}
+function build(){
+ const s=getSettings();
+ if(!s.topic){alert('আগে ভিডিওর বিষয় লিখো।');$('topic').focus();return}
+ const selected=[...document.querySelectorAll('.part:checked')].map(x=>x.value);
+ if(!selected.length){alert('অন্তত একটি কনটেন্ট ফিচার নির্বাচন করো।');return}
+ data.script=makeScript(s);data.titles=makeTitles(s);data.description=makeDescription(s);data.tags=makeTags(s);data.subtitles=toSrt(data.script,s.duration);data.thumbnail=makeThumbnail(s);data.schedule=makeSchedule(s);
+ $('status').textContent='তৈরি হয়েছে';
+ document.querySelectorAll('.tab').forEach(tab=>{tab.classList.toggle('hide',!selected.includes(tab.dataset.tab));});
+ const first=selected.includes(active)?active:selected[0];showTab(first);
+ renderCalendar();
+}
+function showTab(key){
+ active=key;
+ document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===key));
+ const preview=key==='thumbnail';
+ $('thumbPreview').classList.toggle('hide',!preview);
+ $('output').classList.toggle('hide',preview);
+ if(preview){
+  $('thumbText').textContent=val('topic')||'তোমার ভিডিওর শিরোনাম';
+  $('output').textContent=data.thumbnail||'প্রথমে কনটেন্ট তৈরি করো।';
+ }else{
+  $('output').textContent=data[key]||'প্রথমে কনটেন্ট তৈরি করো।';
+ }
+ updateStats(preview?$('thumbText').textContent:$('output').textContent);
+}
+function updateStats(text){$('wordCount').textContent=bnDigits(words(text))+' শব্দ';$('charCount').textContent=bnDigits(text.length)+' অক্ষর'}
+function downloadFile(name,text,type='text/plain;charset=utf-8'){
+ const blob=new Blob(['\ufeff',text],{type});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+async function copyText(text){
+ try{await navigator.clipboard.writeText(text);toast('কপি হয়েছে!')}
+ catch(e){const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();const ok=document.execCommand('copy');ta.remove();toast(ok?'কপি হয়েছে!':'কপি হয়নি—লেখা নির্বাচন করে কপি করো।')}
+}
+let toastTimer;
+function toast(msg){$('status').textContent=msg;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('status').textContent='প্রস্তুত',2200)}
+function renderCalendar(){
+ const root=$('calendar');root.innerHTML='';
+ const labels=val('lang')==='en'?['Sun','Mon','Tue','Wed','Thu','Fri','Sat']:['রবি','সোম','মঙ্গল','বুধ','বৃহ','শুক্র','শনি'];
+ labels.forEach(x=>{const d=document.createElement('div');d.className='day';d.textContent=x;root.appendChild(d)});
+ const start=$('startDate').value?new Date($('startDate').value+'T12:00:00'):new Date();
+ const first=new Date(start.getFullYear(),start.getMonth(),1);const offset=first.getDay();
+ for(let i=0;i<offset;i++){const d=document.createElement('div');root.appendChild(d)}
+ const count=new Date(start.getFullYear(),start.getMonth()+1,0).getDate();const freq=+$('frequency').value;
+ for(let n=1;n<=count;n++){
+  const d=document.createElement('div');d.className='datecell';d.textContent=bnDigits(n);
+  if(n===new Date().getDate()&&start.getMonth()===new Date().getMonth()&&start.getFullYear()===new Date().getFullYear())d.classList.add('today');
+  if(n>=start.getDate()&&(n-start.getDate())%freq===0)d.classList.add('marked');
+  root.appendChild(d)
+ }
+}
+$('generate').addEventListener('click',build);
+$('reset').addEventListener('click',()=>{if(!confirm('ফর্মের বিষয় ও সেটিংস রিসেট করবে?'))return;$('topic').value='';$('category').selectedIndex=0;$('lang').value='bn';$('duration').value='60';$('kind').value='short';$('audience').selectedIndex=0;$('tone').selectedIndex=0;document.querySelectorAll('.part').forEach(x=>x.checked=true);$('status').textContent='রিসেট হয়েছে';});
+$('tabs').addEventListener('click',e=>{const b=e.target.closest('[data-tab]');if(b)showTab(b.dataset.tab)});
+$('copy').addEventListener('click',()=>copyText(active==='thumbnail'?data.thumbnail:($('output').textContent||'')));
+$('download').addEventListener('click',()=>{
+ if(active==='thumbnail'){downloadFile('jisan-thumbnail-brief.txt',data.thumbnail);return}
+ const names={script:'script.txt',titles:'youtube-titles.txt',description:'description.txt',tags:'tags.txt',subtitles:'subtitles.srt',schedule:'upload-plan.txt'};
+ downloadFile(names[active]||'jisan-content.txt',data[active]||'');
+});
+$('downloadAll').addEventListener('click',()=>downloadFile('jisan-youtube-content-pack.txt',Object.entries(data).map(([k,v])=>`========== ${k.toUpperCase()} ==========\n${v}`).join('\n\n')));
+$('calendarDownload').addEventListener('click',()=>downloadFile('jisan-upload-calendar.txt',data.schedule||makeSchedule(getSettings())));
+$('startDate').addEventListener('change',()=>{renderCalendar();if(val('topic'))data.schedule=makeSchedule(getSettings())});
+$('frequency').addEventListener('change',()=>{renderCalendar();if(val('topic'))data.schedule=makeSchedule(getSettings())});
+$('topic').addEventListener('input',()=>{if(active==='thumbnail')$('thumbText').textContent=val('topic')||'তোমার ভিডিওর শিরোনাম'});
+$('lang').addEventListener('change',renderCalendar);
+const now=new Date();$('startDate').value=`${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`;renderCalendar();
+})();
+</script>
+</body>
+</html>
